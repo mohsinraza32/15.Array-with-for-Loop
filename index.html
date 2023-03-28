@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array with for loop</title>
+</head>
+<body>
+    <h1>Array with for loop</h1>
+
+    <script>
+        // let myArr = [2,3,1,2,4,6,6,7,8];
+
+        // console.log("array length: " , myArr.length);
+
+        // for( i = 0 ; i < myArr.length ; i++){           // traverse array
+        //     console.log(myArr[i]);
+        // }
+
+        
+        // let i = 0;         
+
+        // for ( ;  ; ){               // infinite loop
+        //    console.log(i);    
+        // }
+        
+        // i++;
+
+        // let i = 0;
+
+        // for (   ;  ;  ){        // All parameters of for loop are optional.
+            
+        //     if (i > 9) {
+        //         break;
+        //     }
+        //    console.log(i);
+        //    i++;
+        // }
+
+        // let myArr = [2,3,4,5,6,7,7,8,9,]
+
+        // myArr.map((eachValue, index) => {
+        //    console.log(`${index}: ${eachValue}`);
+        // });
+
+        // let myArr = [2,3,4,5,6,7,7,8,9,];
+
+        // let newArr = myArr.map((eachValue, index) => {
+        //     console.log(`${index}: ${eachValue}`);
+        //      return eachValue * 2;
+        // });
+        // console.log("original Array: " , myArr);
+        // console.log("new Array: " , newArr);
+       
+        // let myArr = [2,3,4,5,6,7,7,8,9,];
+
+        // let newArr = myArr.map((eachValue, index) => {
+        //     console.log(`${index}: ${eachValue}`);
+        //     if( eachValue % 2 === 0){
+        //          return eachValue * 2;
+        //     }else{
+        //         return 0;
+        //     }
+        // });
+        // console.log("original Array: " , myArr);
+        // console.log("new Array: " , newArr);
+
+    /////  array.map Task 
+         
+        //  let subjectMarks = [80,90,50,60,77,85,85,90,59,78];
+        //  let obtainedMarks = 0;
+        //    subjectMarks.map((eachValue , index) => {
+        //     obtainedMarks += eachValue; 
+            
+        //    })
+        //    document.write((obtainedMarks * 100) / 1000 + "%");
+
+        // let arr = [5,6,2];
+        //  let sum = arr.reduce((accumulator , currentValue) => {
+        //          return accumulator += currentValue;
+        //  })
+        //  console.log(sum);
+        function  reducerFuncton(previousValue , currentValue){
+            return previousValue += currentValue;
+        }
+
+        let subjectMarks = [80,90,70,70,85,85,80,80,90,68];
+       // sum all items of array
+        let obtainedMarks = subjectMarks.reduce(reducerFuncton , 0);
+        let totalMarks = subjectMarks.length * 100;
+
+        console.log("obtainedMarks: " , obtainedMarks);
+        console.log("totalMarks: " , totalMarks);
+
+        let percentage = (obtainedMarks / totalMarks) * 100;
+         console.log("Percentage: " , percentage + "%");
+       
+        
+
+
+
+    </script>
+</body>
+</html>
